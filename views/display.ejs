@@ -1,0 +1,28 @@
+<%- include("include/header")%>
+<center>
+<h1>Display to student managment system</h1>
+
+<table border="1" width="1200"  align="center" bgcolor="pink" >
+    <tr style={{backgroundColor:"black"}}>
+        <th>Rollno</th>
+        <th>Name</th>
+        <th>city</th>
+        <th>fees</th>
+
+    </tr>
+    <%
+    mydata.forEach((key)=>{
+        %>
+        <tr>
+            <td><%=key.rollno %> </td>
+            <td><%=key.name %></td>
+            <td><%=key.city %></td>
+            <td><%=key.fees %></td>
+        </tr>
+        <%
+    })
+    %>
+</table>
+</center>
+
+<%-include("include/footer")%>

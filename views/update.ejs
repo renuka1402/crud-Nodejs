@@ -1,0 +1,33 @@
+<%- include("include/header")%>
+<center>
+<h1>Display to student managment system</h1>
+
+<table border="1" width="1200"  align="center" bgColor="skyblue" >
+    <tr  >
+        <th>Rollno</th>
+        
+        <th>Name</th>
+        <th>city</th>
+        <th>fees</th>
+        <th>delete</th>
+        <th>edit</th>
+
+    </tr>
+    <%
+    mydata.forEach((key)=>{
+        %>
+        <tr style="background-color: rgb(251, 249, 245);">
+            <td><%=key.rollno %> </td>
+            
+            <td><%=key.name %></td>
+            <td><%=key.city %></td>
+            <td><%=key.fees %></td>
+ 
+        </tr>
+        <%
+    })
+    %>
+</table>
+</center>
+
+<%-include("include/footer")%>
